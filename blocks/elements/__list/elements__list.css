@@ -1,0 +1,11 @@
+.elements__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 17px;
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    overflow: hidden;
+}
