@@ -5,3 +5,16 @@
     font-size: 42px;
     line-height: 48px;
 }
+
+@media (max-width: 700px) {
+    .profile__author-name {
+        margin-left: calc(10px + 18px);
+    }
+}
+
+@media (max-width: 480px) {
+    .profile__author-name {
+        font-size: 27px;
+        line-height: 33px;
+    }
+}

@@ -1,3 +1,6 @@
-.profile__author {
-    margin-left: 30px;
+@media (max-width: 700px) {
+    .profile__author {
+        margin-top: 26px;
+        text-align: center;
+    }
 }
