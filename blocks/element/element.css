@@ -1,6 +1,8 @@
 .element {
+    display: flex;
+    flex-direction: column;
     max-width: 282px;
-    background-color: #fff;
+    max-height: 361px;
     color: #000;
     border-radius: 10px;
     overflow: hidden;

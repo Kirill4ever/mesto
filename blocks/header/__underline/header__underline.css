@@ -1,0 +1,13 @@
+.header__underline {
+    border-color: #545454;
+    width: 100%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+@media (max-width: 480px) {
+    .header__underline {
+        width: calc(100vw - 2px);
+        margin-left: -19px;
+    }
+}

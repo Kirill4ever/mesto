@@ -2,3 +2,9 @@
     margin-top: 66px;
     margin-bottom: 60px;
 }
+
+@media (max-width: 480px) {
+    .page__footer {
+        margin-top: 48px;
+    }
+}

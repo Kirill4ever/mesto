@@ -1,3 +1,9 @@
 .page__header {
     margin-top: 45px;
 }
+
+@media (max-width: 480px) {
+    .page__header {
+        margin-top: 28px;
+    }
+}
