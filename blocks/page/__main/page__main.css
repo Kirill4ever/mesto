@@ -5,4 +5,5 @@
     width: 100%;
     max-width: calc(880px + (19px *2));
     box-sizing: border-box;
+    padding: 0 19px;
 }
