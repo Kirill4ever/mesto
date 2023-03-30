@@ -1,12 +1,10 @@
 .profile__author {
-    width: 50%;
-    max-width: 500px;
+    width: 100%;
 }
 
 @media (max-width: 700px) {
     .profile__author {
-        margin-top: 26px;
         text-align: center;
-        width: 100%;
+        /* margin-left: 26px; */
     }
 }

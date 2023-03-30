@@ -1,9 +1,0 @@
-.popup__author-description {
-    margin-bottom: 48px;
-}
-
-@media (max-width:480px) {
-    .popup__author-description {
-        margin-bottom: 44px;
-    }
-}

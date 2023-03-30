@@ -1,30 +1,27 @@
 let container = document.querySelector('.page');
 let popup = container.querySelector('.popup');
-let form = container.querySelector('.popup__container');
+let form = container.querySelector('.popup__form');
 
 let editBtn = container.querySelector('.profile__edit-button');
 
 let authorName = container.querySelector('.profile__author-name');
 let authorDescription = container.querySelector('.profile__author-description');
 
-let nameField = container.querySelector('.popup__author-name');
-let descriptionField = container.querySelector('.popup__author-description');
+let nameField = container.querySelector('.popup__form_field_author-name');
+let descriptionField = container.querySelector('.popup__form_field_author-description');
 
 function openPopup () {
     popup.classList.add('popup_opened');
-    nameField.value = authorName.innerHTML;
-    descriptionField.value = authorDescription.innerHTML;
+    nameField.value = authorName.textContent;
+    descriptionField.value = authorDescription.textContent;
 }
-
-let saveBtn = container.querySelector('.popup__save-btn');
-
 function saveChanges (evt) {
+    evt.preventDefault();
     let newAuthorName = nameField.value;
     let newAuthorDescription = descriptionField.value;
     authorName.textContent = newAuthorName;
     authorDescription.textContent = newAuthorDescription;
     closePopup();
-    evt.preventDefault();
 }
 
 let closeBtn = container.querySelector('.popup__close-btn')

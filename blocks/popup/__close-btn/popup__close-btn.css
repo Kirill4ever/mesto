@@ -14,7 +14,7 @@
     opacity: 60%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 540px) {
     .popup__close-btn {
         background-image: url(../../../images/popup-cls-btn_small.svg);
         width: 20px;

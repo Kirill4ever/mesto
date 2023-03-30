@@ -7,4 +7,16 @@
     border: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     padding: 0;
+    margin-bottom: 20px;
+}
+
+.popup__text-field:last-of-type {
+    margin-bottom: 48px;
+}
+
+@media (max-width: 480px) {
+    .popup__text-field:last-of-type {
+        margin-bottom: 45px;
+        height: 36px;
+    }
 }

@@ -2,11 +2,13 @@
     margin-left: auto;
     width: 150px;
     height: 50px;
+    border: 2px solid #fff;
+    border-radius: 2px;
     background-image: url(../../../images/add-button.svg);
     background-repeat: no-repeat;
-    background-size: 150px;
+    background-size: 22px;
     background-color: transparent;
-    border: none;
+    background-position: center;
     cursor: pointer;
     padding: 0;
 }
@@ -17,11 +19,10 @@
 
 @media (max-width: 700px) {
     .profile__add-button {
-        margin: 34px 0 0 0;
-        background-image: url(../../../images/add-button-wide.svg);
+        margin: 33px 0 0 0;
         width: 100%;
         max-width: 282px;
         max-height: 50px;
-        background-size: 100%;
+        background-size: 16px;
     }
 }
