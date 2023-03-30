@@ -7,8 +7,8 @@ let editBtn = container.querySelector('.profile__edit-button');
 let authorName = container.querySelector('.profile__author-name');
 let authorDescription = container.querySelector('.profile__author-description');
 
-let nameField = container.querySelector('.popup__form_field_author-name');
-let descriptionField = container.querySelector('.popup__form_field_author-description');
+let nameField = container.querySelector('.popup__text-field_value_author-name');
+let descriptionField = container.querySelector('.popup__text-field_value_author-description');
 
 function openPopup () {
     popup.classList.add('popup_opened');
