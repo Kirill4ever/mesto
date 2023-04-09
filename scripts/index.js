@@ -1,6 +1,6 @@
 let container = document.querySelector('.page');
 let popup = container.querySelector('.popup');
-let form = container.querySelector('.popup__container');
+let form = container.querySelector('.popup__form');
 
 let editBtn = container.querySelector('.profile__edit-button');
 
