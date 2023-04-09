@@ -1,0 +1,20 @@
+.profile__grid {
+    display: grid;
+    grid-template-columns: 1fr calc(24px + 18px);
+    align-items: baseline;
+}
+
+@media (max-width: 700px) {
+    .profile__grid {
+        grid-template-columns: calc(24px + 18px) 1fr calc(24px + 18px);
+    }
+    .profile__grid::before {
+        content: '';
+    }
+}
+
+@media (max-width: 480px) {
+    .profile__grid {
+        grid-template-columns: calc(18px + 10px) 1fr calc(18px + 10px);
+    }
+}

@@ -10,6 +10,7 @@
 @import url(../blocks/profile/__author-and-editbtn/profile__author-and-editbtn.css);
 @import url(../blocks/profile/__avatar/profile__avatar.css);
 @import url(../blocks/profile/__author/profile__author.css);
+@import url(../blocks/profile/__grid/profile__grid.css);
 @import url(../blocks/profile/__author-name/profile__author-name.css);
 @import url(../blocks/profile/__edit-button/profile__edit-button.css);
 @import url(../blocks/profile/__author-description/profile__author-description.css);
@@ -33,5 +34,3 @@
 @import url(../blocks/popup/__save-btn/popup__save-btn.css);
 @import url(../blocks/popup/__close-btn/popup__close-btn.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
-
-
