@@ -2,6 +2,7 @@
 const container = document.querySelector('.page');
 const popupEditProfile = container.querySelector('#popupEditProfile');
 const popupAddCard = container.querySelector('#popupAddCard');
+const popupImage = container.querySelector('#popupImage');
 
 //Select forms
 const editForm = container.querySelector('#editForm');
@@ -12,10 +13,13 @@ const editBtn = container.querySelector('.profile__edit-button');
 const addBtn = container.querySelector('.profile__add-button');
 const closeEditFormBtn = popupEditProfile.querySelector('.popup__close-btn');
 const closeAddFormBtn = popupAddCard.querySelector('.popup__close-btn');
+const closeBigImageBtn = popupImage.querySelector('.popup__close-btn');
 
 //Select elements for editing
 const authorName = container.querySelector('.profile__author-name');
 const authorDescription = container.querySelector('.profile__author-description');
+const bigImage = container.querySelector('.popup__image');
+const bigImageCaption = container.querySelector('.popup__image-caption');
 
 //Select fields
 const placeNameField = container.querySelector('.popup__text-field_value_place-name');
@@ -90,31 +94,40 @@ const cardFlex = container.querySelector('.elements__list');
 
 //Create card element
 function createCardElement(cardData){
-const cardElement = cardTemplate.content.querySelector('.element').cloneNode(true);
+    const cardElement = cardTemplate.content.querySelector('.element').cloneNode(true);
 
-const elementImage = cardElement.querySelector('.element__image');
-const elementName = cardElement.querySelector('.element__name');
+    const elementImage = cardElement.querySelector('.element__image');
+    const elementName = cardElement.querySelector('.element__name');
 
-elementImage.src = cardData.link;
-elementImage.alt = cardData.name;
-elementName.textContent = cardData.name;
+    elementImage.src = cardData.link;
+    elementImage.alt = cardData.name;
+    elementName.textContent = cardData.name;
 
-//Card buttons magic
-const trashBtn = cardElement.querySelector('.element__trash-btn');
-const likeButton = cardElement.querySelector('.element__like-button');
+    //Card buttons magic
+    const trashBtn = cardElement.querySelector('.element__trash-btn');
+    const likeButton = cardElement.querySelector('.element__like-button');
+    const imgLikeABtn = cardElement.querySelector('.element__image');
 
-function deleteCard() {
-    cardElement.remove();
-}
+    function deleteCard() {
+        cardElement.remove();
+    }
 
-function switchLike() {
-    likeButton.classList.toggle('element__like-button_active');
-}
+    function switchLike() {
+        likeButton.classList.toggle('element__like-button_active');
+    }
 
-likeButton.addEventListener('click', switchLike);
-trashBtn.addEventListener('click', deleteCard);
+    function showBigImage() {
+        bigImage.src = cardData.link;
+        bigImage.alt = cardData.name;
+        bigImageCaption.textContent = cardData.name;
+        openPopup(popupImage);
+    }
 
-return cardElement;
+    likeButton.addEventListener('click', switchLike);
+    trashBtn.addEventListener('click', deleteCard);
+    imgLikeABtn.addEventListener('click', showBigImage);
+
+    return cardElement;
 };
 
 //Renderer
@@ -147,8 +160,12 @@ function addCard (evt) {
 }
 
 addBtn.addEventListener('click', openAddCardPopup);
+addCardForm.addEventListener('submit', addCard);
+
 closeAddFormBtn.addEventListener('click', function() {
     closePopup(popupAddCard);
 });
-addCardForm.addEventListener('submit', addCard);
+closeBigImageBtn.addEventListener('click', function() {
+    closePopup(popupImage);
+});
 
