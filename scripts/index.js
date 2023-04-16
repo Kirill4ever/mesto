@@ -99,6 +99,21 @@ elementImage.src = cardData.link;
 elementImage.alt = cardData.name;
 elementName.textContent = cardData.name;
 
+//Card buttons magic
+const trashBtn = cardElement.querySelector('.element__trash-btn');
+const likeButton = cardElement.querySelector('.element__like-button');
+
+function deleteCard() {
+    cardElement.remove();
+}
+
+function switchLike() {
+    likeButton.classList.toggle('element__like-button_active');
+}
+
+likeButton.addEventListener('click', switchLike);
+trashBtn.addEventListener('click', deleteCard);
+
 return cardElement;
 };
 
