@@ -45,8 +45,8 @@ function openEditPopup () {
 
 function saveChanges (evt) {
     evt.preventDefault();
-    let newAuthorName = nameField.value;
-    let newAuthorDescription = descriptionField.value;
+    const newAuthorName = nameField.value;
+    const newAuthorDescription = descriptionField.value;
     authorName.textContent = newAuthorName;
     authorDescription.textContent = newAuthorDescription;
     closePopup(popupEditProfile);
@@ -131,14 +131,18 @@ function createCardElement(cardData){
 };
 
 //Renderer
-function renderCard(cardElement) {
-cardFlex.prepend(cardElement);
+function renderCard(cardElement, place) {
+    if (place === 'start') {
+        cardFlex.prepend(cardElement);
+    } else {
+        cardFlex.append(cardElement);
+    };
 };
 
 //Add initial cards to the page
 initialCards.forEach((card) => {
-const element = createCardElement(card);
-renderCard(element);
+    const element = createCardElement(card);
+    renderCard(element);
 });
 
 //Add new place
@@ -150,11 +154,11 @@ function openAddCardPopup () {
 
 function addCard (evt) {
     evt.preventDefault();
-    let newPlace ={};
+    const newPlace ={};
     newPlace.name = placeNameField.value;
     newPlace.link = placeImageField.value;
     const element = createCardElement(newPlace);
-    renderCard(element);
+    renderCard(element, 'start');
     closePopup(popupAddCard);
     
 }
